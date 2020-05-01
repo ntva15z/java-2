@@ -1,0 +1,29 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Lab6_3;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ *
+ * @author HOANG
+ */
+public class OddThread extends Thread {
+    @Override
+    public void run(){
+        for (int i = 1; i <= 10; i++) {
+            try {
+                if(i %2==1){
+                    System.out.println("So le: " + i);
+                 }
+                Thread.sleep(10);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(OddThread.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+}
